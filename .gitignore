@@ -1,0 +1,15 @@
+# dependencies
+node_modules/
+
+# production
+build/
+
+# development
+.vscode/*
+!.vscode/launch.json
+.env
+*.log
+globalConfig.json
+
+# misc
+.DS_Store

@@ -1,0 +1,26 @@
+{
+  "name": "@greeeg/cloud-architecture-fundamentals",
+  "version": "0.0.0",
+  "description": "Material for a Cloud computing workshop",
+  "private": true,
+  "repository": "git@github.com:greeeg/cloud-architecture-fundamentals.git",
+  "author": "Grégoire Mielle <hello@greeeg.com> (https://greeeg.com)",
+  "license": "MIT",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "engines": {
+    "node": ">=8.10",
+    "yarn": ">=1.5"
+  },
+  "scripts": {
+    "start:api": "yarn workspace api start",
+    "start:client": "yarn workspace client start",
+    "build:api": "yarn workspace api build"
+  },
+  "devDependencies": {
+    "prettier": "^2.1.2"
+  }
+}

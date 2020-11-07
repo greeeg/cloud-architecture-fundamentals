@@ -1,0 +1,7 @@
+{
+  "ignore": ["./build/"],
+  "ext": "ts",
+  "execMap": {
+    "ts": "node -r ts-node/register"
+  }
+}
