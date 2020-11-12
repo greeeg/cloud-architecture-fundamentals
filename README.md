@@ -18,33 +18,53 @@
 
 ## Quick-access links
 
-- [Docker cheatsheet](./docs/docker-cheatsheet.md)
-- [Kubernetes cheatsheet](./docs/kubernetes-cheatsheet.md)
+- Application [📖 docs](./app)
+
+Starting-point for demonstration purposes
+
+- Tracks [📖 docs](./tracks)
+
+Deep dive in specific topics
+
+- [Documentation](./docs)
+
+- Cheat sheets & docs
 
 ## Plan
 
-- Introduction to Cloud Computing
-  - Computing in History
-  - What is Cloud Computing?
-  - Types of Cloud & players
-  - Why is Cloud Computing challenging for developers?
-- From localhost to production
+### Introduction to Cloud Computing
 
-  - From 0 to 100 users
+- Computing in History
+- What is Cloud Computing?
+- Types of Cloud & players
+- Why is Cloud Computing challenging for developers?
 
-    Test
+### From localhost to production
 
-  - From 100 to 10,000 users
-  - From 10,000 to 100,000 users
-  - From 100,000 to 1,000,000 users
+- From 0 to 100 users
 
-- DevOps
-  - Continuous integration
-  - Continuous deployment
-  - Monitoring & Observability
-  - Alerting & Paging
-  - Operating & Security
-  - Infrastructure as Code
+  Layered architecture, networking & computing basics, datastore choices
+
+- From 100 to 10,000 users
+
+  Scaling basics, containerization, load balancing
+
+- From 10,000 to 100,000 users
+
+  Service-oriented architecture, orchestration, CDNs, scaling datastores
+
+- From 100,000 to 1,000,000 users
+
+  Autoscaling, fully-managed services, serverless, multiple AZ & regions
+
+### DevOps
+
+- Continuous integration
+- Continuous deployment
+- Monitoring & Observability
+- Alerting & Paging
+- Operating & Security
+- Infrastructure as Code
 
 ## License
 
