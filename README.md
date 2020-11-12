@@ -4,8 +4,7 @@
 
 > Introduction to Cloud Computing & Cloud architecture patterns, mainly for an [HETIC](https://www.hetic.net) course
 
-
-## Objectives
+## Objectives
 
 - Understand what is Cloud Computing, its value, advantages & challenges
 - Master Cloud main principles & terminology
