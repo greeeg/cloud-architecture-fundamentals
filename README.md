@@ -29,11 +29,15 @@
   - Types of Cloud & players
   - Why is Cloud Computing challenging for developers?
 - From localhost to production
+
   - From 0 to 100 users
+
     Test
+
   - From 100 to 10,000 users
   - From 10,000 to 100,000 users
   - From 100,000 to 1,000,000 users
+
 - DevOps
   - Continuous integration
   - Continuous deployment
@@ -41,5 +45,7 @@
   - Alerting & Paging
   - Operating & Security
   - Infrastructure as Code
+
+## License
 
 Licensed under the [AGPL-3.0 License](./LICENSE).
