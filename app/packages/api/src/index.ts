@@ -1,15 +1,15 @@
-import express from "express";
-import cors from "cors";
+import { createAPIServer } from "./createServer";
+import { addNewsNamespace } from "./namespaces/news";
+import { addExchangeRatesNamespace } from "./namespaces/exchange-rates";
 
-const app = express();
-app.use(cors());
+const setup = () => {
+  const server = createAPIServer();
+  server.addNamespace("/news", addNewsNamespace);
+  server.addNamespace("/exchange-rates", addExchangeRatesNamespace);
 
-app.get("/", (req, res) => {
-  res.json({
-    message: "Hello World",
+  server.listen(9999, () => {
+    console.log("Server listening in port 9999");
   });
-});
+};
 
-app.listen(9000, () => {
-  console.log("App is listening on port 9000");
-});
+void setup();

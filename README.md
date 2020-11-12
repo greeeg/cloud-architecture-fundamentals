@@ -18,17 +18,17 @@
 
 ## Quick-access links
 
-- Application [📖 docs](./app)
+- **Application** [📖 docs](./app)
 
 Starting-point for demonstration purposes
 
-- Tracks [📖 docs](./tracks)
+- **Tracks** [📖 docs](./tracks)
 
 Deep dive in specific topics
 
-- [Documentation](./docs)
+- **Documentation** [📖 docs](./docs)
 
-- Cheat sheets & docs
+Cheat sheets & docs
 
 ## Plan
 
@@ -41,19 +41,19 @@ Deep dive in specific topics
 
 ### From localhost to production
 
-- From 0 to 100 users
+- **From 0 to 100 users**
 
   Layered architecture, networking & computing basics, datastore choices
 
-- From 100 to 10,000 users
+- **From 100 to 10,000 users**
 
   Scaling basics, containerization, load balancing
 
-- From 10,000 to 100,000 users
+- **From 10,000 to 100,000 users**
 
   Service-oriented architecture, orchestration, CDNs, scaling datastores
 
-- From 100,000 to 1,000,000 users
+- **From 100,000 to 1,000,000 users**
 
   Autoscaling, fully-managed services, serverless, multiple AZ & regions
 
