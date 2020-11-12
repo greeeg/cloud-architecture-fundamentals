@@ -1,0 +1,42 @@
+version: '3.7'
+
+services:
+  api:
+    container_name: api
+    build:
+      context: ./api
+      dockerfile: dev.Dockerfile
+    volumes:
+      - ./api/src:/usr/src/app/src
+    expose:
+      - 9999
+    ports:
+      - 9999:9999
+
+  postgres:
+    image: postgres:12.2
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: example
+      POSTGRES_DATABASE: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - datastore:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: 'contact@lyzie.co'
+      PGADMIN_DEFAULT_PASSWORD: 'example'
+    ports:
+      - 16543:80
+    depends_on:
+      - postgres
+
+volumes:
+  datastore:

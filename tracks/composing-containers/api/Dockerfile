@@ -7,20 +7,13 @@ WORKDIR /usr/share/app
 
 # Repository directory
 COPY ./package.json ./package.json
+COPY ./tsconfig.json ./tsconfig.json
 COPY ./yarn.lock yarn.lock
-
-# Service directory
-RUN mkdir -p api
-COPY ./packages/api/src ./packages/api/src
-COPY ./packages/api/tsconfig.json ./packages/api/tsconfig.json
-COPY ./packages/api/package.json ./packages/api/package.json
 
 # Install all dependencies for build
 RUN yarn --frozen-lockfile
 
-RUN yarn workspace api build
-
-# Clean dependencies for production
+RUN yarn build
 RUN yarn --frozen-lockfile --production && yarn cache clean
 
 FROM base as runtime
@@ -30,7 +23,7 @@ WORKDIR /usr/share/app
 
 COPY --from=builder /usr/share/app/package.json ./package.json
 COPY --from=builder /usr/share/app/node_modules node_modules
-COPY --from=builder /usr/share/app/packages/api/build ./build
+COPY --from=builder /usr/share/app/build ./build
 
 EXPOSE 9999
 CMD ["node", "build/index.js"]

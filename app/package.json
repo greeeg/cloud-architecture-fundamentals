@@ -1,11 +1,8 @@
 {
-  "name": "@greeeg/cloud-architecture-fundamentals",
+  "name": "house-of-coins",
   "version": "0.0.0",
-  "description": "Material for a Cloud computing workshop",
+  "description": "",
   "private": true,
-  "repository": "git@github.com:greeeg/cloud-architecture-fundamentals.git",
-  "author": "Grégoire Mielle <hello@greeeg.com> (https://greeeg.com)",
-  "license": "MIT",
   "workspaces": {
     "packages": [
       "packages/*"
@@ -18,6 +15,7 @@
   "scripts": {
     "start:api": "yarn workspace api start",
     "start:client": "yarn workspace client start",
+    "build:client": "yarn workspace client build",
     "build:api": "yarn workspace api build"
   },
   "devDependencies": {
