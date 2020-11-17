@@ -4,4 +4,5 @@
 // learn more: https://github.com/testing-library/jest-dom
 import "@testing-library/jest-dom";
 
+// Used by msw in `test-utils`
 process.env.REACT_APP_API_URL = "http://api.tech";

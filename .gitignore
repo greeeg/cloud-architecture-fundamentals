@@ -13,3 +13,6 @@ globalConfig.json
 
 # misc
 .DS_Store
+
+# Serverless
+.build/

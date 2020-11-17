@@ -61,10 +61,10 @@ Cheat sheets & docs
 
 - Continuous integration
 - Continuous deployment
+- Infrastructure as Code
 - Monitoring & Observability
 - Alerting & Paging
 - Operating & Security
-- Infrastructure as Code
 
 ## License
 
