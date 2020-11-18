@@ -24,11 +24,11 @@ Starting-point for demonstration purposes
 
 - **Tracks** [📖 docs](./tracks)
 
-Deep dive in specific topics
+Deep dive into specific topics
 
 - **Documentation** [📖 docs](./docs)
 
-Cheat sheets & docs
+Cheatsheets & docs
 
 ## Plan
 

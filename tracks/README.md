@@ -1,23 +1,13 @@
 # Tracks
 
-> Deep dive in specific topics
+> Deep dive into specific topics
 
-- **Containerizing applications with Docker** [📖 docs](./app)
+- **Containerizing applications with Docker** [📖 docs](./docker-containers)
 
-Starting-point for demonstration purposes
+- **Composing containers with Docker compose** [📖 docs](./docker-compose)
 
-- **Composing containers with Docker compose** [📖 docs](./tracks)
+- **Orchestrating containers with Kubernetes** [📖 docs](./kubernetes-cluster)
 
-Deep dive in specific topics
+- **Approaching serverless with the Serverless framework** [📖 docs](./serverless-framework)
 
-- **Orchestrating containers with Kubernetes** [📖 docs](./docs)
-
-Cheat sheets & docs
-
-- **Approaching serverless with the Serverless framework** [📖 docs](./docs)
-
-Cheat sheets & docs
-
-- **Provisioning infrastructure with Infrastructure as Code** [📖 docs](./docs)
-
-Cheat sheets & docs
+- **Provisioning infrastructure with Infrastructure as Code** [📖 docs](./terraform)
