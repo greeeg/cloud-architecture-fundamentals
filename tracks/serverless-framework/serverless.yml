@@ -3,22 +3,14 @@ service: hello-serverless
 provider:
   name: aws
   runtime: nodejs12.x
-  environment:
-    NODE_ENV: dev
+  region: eu-west-3
 
 plugins:
   - serverless-plugin-typescript 
   - serverless-offline
 
-package:
-  exclude:
-    - config/.env.stg
-    - config/.env.pro
-  include:
-    - config/.env.dev
-
 functions:
-  find:
+  hello:
     handler: src/index.hello
     events:
       - http:

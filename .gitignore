@@ -16,3 +16,4 @@ globalConfig.json
 
 # Serverless
 .build/
+.serverless
