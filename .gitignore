@@ -17,3 +17,9 @@ globalConfig.json
 # Serverless
 .build/
 .serverless
+
+# Terraform
+terraform.tfstate
+terraform.tfstate.backup
+.terraform
+
