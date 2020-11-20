@@ -2,12 +2,22 @@
 
 > Deep dive into specific topics
 
-- **Containerizing applications with Docker** [📖 docs](./docker-containers)
+- **Docker** [📖 docs](./docker-containers)
 
-- **Composing containers with Docker compose** [📖 docs](./docker-compose)
+Containerize applications to ship & build efficiently
 
-- **Orchestrating containers with Kubernetes** [📖 docs](./kubernetes-cluster)
+- **Docker Compose** [📖 docs](./docker-compose)
 
-- **Approaching serverless with the Serverless framework** [📖 docs](./serverless-framework)
+Define & run multi-container Docker applications
 
-- **Provisioning infrastructure with Infrastructure as Code** [📖 docs](./terraform)
+- **Kubernetes** [📖 docs](./kubernetes-cluster)
+
+Orchestrate containers at scale
+
+- **Serverless framework** [📖 docs](./serverless-framework)
+
+Simplify the development, deployment & management of function-based serverless applications
+
+- **Terraform** [📖 docs](./terraform)
+
+Provision & manage infrastructure with Infrastructure as Code
