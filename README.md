@@ -12,23 +12,21 @@
 
 ## Prerequisites
 
-- Install [Docker for Desktop](https://www.docker.com/products/docker-desktop)
-- Create an [AWS account](https://portal.aws.amazon.com/billing/signup) & install the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) if you want to follow along AWS parts
-- Install [Serverless framework](https://www.serverless.com/framework/docs/getting-started/) if you want to follow along the Serverless section
+- Create an [AWS account](https://portal.aws.amazon.com/billing/signup) & install the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) if you want to follow along on AWS
 
 ## Quick-access links
 
-- **Application** [📖 docs](./app)
+- **Documentation** [📖 docs](./docs)
 
-Starting-point for demonstration purposes
+Cheatsheets & docs
 
 - **Tracks** [📖 docs](./tracks)
 
 Deep dive into specific topics
 
-- **Documentation** [📖 docs](./docs)
+- **Application** [📖 docs](./app)
 
-Cheatsheets & docs
+Starting-point for demonstration purposes
 
 ## Plan
 
