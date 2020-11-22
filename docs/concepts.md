@@ -25,3 +25,5 @@
 ## Multi-tenancy
 
 ## Redundancy
+
+## Elasticity

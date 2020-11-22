@@ -2,6 +2,8 @@
 
 > Deep dive into specific topics
 
+## Topics
+
 - **Docker** [📖 docs](./docker-containers)
 
 Containerize applications to ship & build efficiently

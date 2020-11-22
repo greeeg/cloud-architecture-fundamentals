@@ -1,4 +1,4 @@
-# Building blocks
+# Building blocks
 
 ## Networking
 
@@ -16,9 +16,9 @@
 
 ### Container orchestration
 
-## Communication
+## Communication/Processing
 
-### Message broker
+### Message broker
 
 ## Storage
 
