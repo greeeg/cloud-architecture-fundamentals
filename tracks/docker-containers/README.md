@@ -1,6 +1,14 @@
 # Containerized application
 
+[Docker](https://www.docker.com/) is standardized software packaging solution used to run applications in isolation, anywhere in the Cloud.
+
+## Prerequisites
+
+- Install [Docker for Desktop](https://www.docker.com/products/docker-desktop)
+
 ## Docker on an AWS EC2 instance
+
+Once an EC2 instance is up and running, execute the followings commands to set up Docker.
 
 ```sh
 # SSH into your instance
