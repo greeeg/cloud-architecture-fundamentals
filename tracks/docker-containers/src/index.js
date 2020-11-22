@@ -3,6 +3,10 @@ const { lookup } = require('./lookup')
 
 const app = express()
 
+app.get('/health', (req, res) => {
+  return res.json({})
+})
+
 app.get('/lookup', async (req, res) => {
   const domainQuery = req.query.domain
 
