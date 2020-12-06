@@ -1,6 +1,6 @@
 # Docker cheatsheet
 
-This cheatsheet lists some common operations you might want to perform with Docker. If you want to learn more about specific subjects like volumes or networks, check otu the official [Docker CLI documentation](https://docs.docker.com/engine/reference/commandline/cli/).
+This cheatsheet lists some common operations you might want to perform with Docker. If you want to learn more about specific subjects like volumes or networks, check out the official [Docker CLI documentation](https://docs.docker.com/engine/reference/commandline/cli/).
 
 ## Registry & repositories
 
