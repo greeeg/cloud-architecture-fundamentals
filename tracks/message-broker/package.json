@@ -1,0 +1,14 @@
+{
+  "name": "message-broker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start:api": "node src/api.js",
+    "start:worker": "node src/worker.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "nsqjs": "^0.12.1"
+  }
+}
