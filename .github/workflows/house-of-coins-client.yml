@@ -43,6 +43,7 @@ jobs:
         working-directory: ./app/packages/client
         env:
           CI: true
+          REACT_APP_API_URL: ${{ secrets.AWS_LAMBDA_API_URL }}
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
