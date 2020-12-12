@@ -1,0 +1,23 @@
+service: house-of-coins
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: eu-west-3
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+
+functions:
+  hello:
+    handler: src/index.app
+    events:
+      - http:
+          path: /
+          method: ANY
+          cors: true
+      - http:
+          path: /{any+}
+          method: ANY
+          cors: true
