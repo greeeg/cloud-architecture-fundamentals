@@ -34,6 +34,9 @@ const handlers = [
       ]),
     );
   }),
+  rest.get("http://api.tech/news", async (req, res, ctx) => {
+    return res(ctx.json([]));
+  }),
 ];
 
 const server = setupServer(...handlers);

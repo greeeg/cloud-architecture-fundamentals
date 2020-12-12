@@ -26,7 +26,7 @@ Deep dive into specific topics
 
 - **Application** [📖 docs](./app)
 
-Starting-point for demonstration purposes
+Sample app to demonstrate CI, CD & Monitoring possibilities
 
 ## Plan
 

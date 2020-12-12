@@ -1,29 +1,27 @@
-import React, { useEffect, useState } from "react";
+import React, { lazy, Suspense } from "react";
+import { Route, HashRouter } from "react-router-dom";
 
-function App() {
-  const [text, setText] = useState("");
+const LazyHome = lazy(() =>
+  import(/* webpackChunkName: "screens-home" */ "./screens/Home").then((module) => ({
+    default: module.Home,
+  })),
+);
 
-  useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL!}/assets`)
-      .then((res) => res.json())
-      .then((res) => {
-        setText(res[0].name);
-      });
-  }, []);
+const LazyAsset = lazy(() =>
+  import(/* webpackChunkName: "screens-home" */ "./screens/Asset").then((module) => ({
+    default: module.Asset,
+  })),
+);
 
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>{text}</h1>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense fallback={<p>Loading...</p>}>
+      <HashRouter>
+        <Route path="/" exact component={LazyHome} />
+        <Route path="/assets/:id" exact component={LazyAsset} />
+      </HashRouter>
+    </Suspense>
   );
-}
+};
 
 export default App;

@@ -1,4 +1,5 @@
 service: house-of-coins
+useDotenv: true
 
 provider:
   name: aws
