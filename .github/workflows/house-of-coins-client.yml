@@ -24,20 +24,31 @@ jobs:
         env:
           CI: true
 
-  # continuous_deployment:
-  #   needs: continuous_integration
-  #   if: github.ref == 'refs/heads/master'
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - name: Configure AWS Credentials
-  #       uses: aws-actions/configure-aws-credentials@v1
-  #       with:
-  #         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-  #         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  #         aws-region: ${{ secrets.AWS_REGION }}
-  #     - name: Build React App
-  #       run: npm install && npm run build
-  #       working-directory: ./app/packages/client
-  #     - name: Deploy app build to S3 bucket
-  #       run: aws s3 sync ./dist/ s3://<bucket-name> --delete
+  continuous_deployment:
+    needs: continuous_integration
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: yarn install
+        working-directory: ./app/packages/client
+      - run: yarn build
+        working-directory: ./app/packages/client
+        env:
+          CI: true
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+      - name: Deploy client to S3 bucket
+        run: aws s3 sync ./build/ s3://${{ secrets.AWS_S3_BUCKET_CLIENT }} --delete
+        working-directory: ./app/packages/client
