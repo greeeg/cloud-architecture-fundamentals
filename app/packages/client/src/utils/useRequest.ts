@@ -13,7 +13,7 @@ export const useRequest = <T>({ path, method }: { path: string; method: "get" })
       .then((res) => setData(res))
       .catch((error) => setError(error))
       .finally(() => setIsLoading(false));
-  }, []);
+  }, [method, path]);
 
   return { data, error, isLoading };
 };
