@@ -17,11 +17,13 @@ const errorHandler: ErrorRequestHandler = (err, req, res, next) => {
 
 const monitoringHandler: RequestHandler = (req, res, next) => {
   const startTime = Date.now();
+  const resourceName = `${req.method} ${req.originalUrl}`;
 
   const context: Record<string, string | number> = {
     timestamp: new Date().toISOString(),
     path: req.originalUrl,
     method: req.method,
+    resource_name: resourceName,
     http_version: req.httpVersion,
     http_url: req.path,
     http_method: req.method,
