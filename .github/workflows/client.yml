@@ -1,0 +1,25 @@
+name: house-of-coins-client
+on: push
+
+jobs:
+  continuous_integration:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: yarn install
+        working-directory: ./app/packages/client
+      - run: yarn test
+        working-directory: ./app/packages/client
+        env:
+          CI: true
+      - run: yarn build
+        working-directory: ./app/packages/client
+        env:
+          CI: true
