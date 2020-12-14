@@ -49,7 +49,7 @@ export const Home: FC = () => {
   return (
     <div>
       <header>
-        <h1>House of Coins</h1>
+        <h1>House of HETIC</h1>
         <p>
           Learn everything about <mark>cryptocurrencies</mark>
         </p>
